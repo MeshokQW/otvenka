@@ -1,7 +1,7 @@
 import telebot
 from config import TOKEN
 
-bot = telebot.TeleBot("8011962563:AAHlk4_szKFjpo3D9khxcIC4X4pRRKnnLXI")
+bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
@@ -29,4 +29,5 @@ def handle_question(message):
         bot.send_message(message.chat.id, "К сожалению, я не знаю ответа на этот вопрос.")
 
 bot.infinity_polling()
+
     
